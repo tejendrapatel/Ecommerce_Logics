@@ -1,0 +1,27 @@
+<style>
+    table,th,td{border: 1px solid black}
+</style>
+<center>
+    <h1> This is the HomePage </h1>
+    <table style="width:100%">
+        <tr>
+            <th>module1</th>
+            <th>module2</th>
+            <th>module3</th>
+            <th>module4</th>
+            <th>module5</th>
+            <th>module6</th>
+            <th>module7</th>
+
+        </tr>
+        <tr>
+            <td><a href="{% url 'students' %}">Students</a></td>
+            <td><a href="{% url 'teachers' %}">Teachers</a></td>
+            <td><a href="{% url 'user' %}">User</a></td>
+            <td><a href="{% url 'login' %}">Login</a></td>
+            <td><a href="{% url 'contact' %}">Contact</a></td>
+            <td><a href="{% url 's_signup' %}">Student Sign Up</a></td>
+            <td><a href="{% url 't_signup' %}">Teacher Sign Up</a></td>
+        </tr>
+    </table>
+</center>

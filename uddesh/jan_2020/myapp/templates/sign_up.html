@@ -1,0 +1,21 @@
+<center>
+    <h1>Add New Student</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <select name="cid">
+            {% for i in clgs %}
+            <option value="{{ i.id }}">{{ i.name }}</option>
+            {% endfor %}
+        </select>
+        <br></br>
+        <input type="text" placeholder="Enter Your Name" required name="sname" /><br><br>
+        <input type="text" placeholder="Enter Your Roll Number" required name="srnum" /><br><br>
+        <input type="number" placeholder="Enter Your Number" required name="snum" /><br><br>
+        <input type="email" placeholder="Enter Your Email" required name="semail" /><br><br>
+        <input type="text" placeholder="Enter Your Image" required name="simage" /><br><br>
+        <input type="submit" value="Sign Up" /><br><br>
+
+    </form>
+
+
+</center>

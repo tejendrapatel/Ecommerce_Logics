@@ -1,0 +1,18 @@
+<style>
+    table,th,td{border:1px solid black}
+</style>
+<center>
+    <h1 style="color:blue"> This page contains Teachers Information</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Teacher ID</th>
+        </tr>
+        {% for i in key1 %}
+            <tr>
+                <td><a href="{% url 'tdetails' i.id %}">{{ i.name }}</a></td>
+                <td>{{ i.teacherid }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</center>

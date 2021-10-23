@@ -1,0 +1,15 @@
+{% load static %}
+<center>
+
+    <h1> List Of Top Of Colleges  </h1>
+</center>
+<center>
+    {% for i in college %}
+    <li>{{ i.name }}</li>
+    <li>{{ i.address }}</li>
+    <li>{{ i.contact }}</li>
+    {% endfor %}
+    <a href="{% url 'contact' %}">click here for next page</a>
+</center>
+<marquee><img src = "{% static 'poshan.PNG' %}" width="200" height="300"></marquee>
+<button onclick="window.location.href = 'http://127.0.0.1:8000/Add_student/';">Click to add student</button>

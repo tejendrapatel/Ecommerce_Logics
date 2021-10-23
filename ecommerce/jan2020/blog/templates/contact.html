@@ -1,0 +1,13 @@
+{% load static %}
+<center>
+    <h1> contact the college </h1>
+</center>
+<center>
+    {% for i in contact %}
+    <li><h1><a href="{% url 'details' i.id %}">{{ i.email }}</a></h1></li>
+    <li>{{ i.pin }}</li>
+    <li>{{ i.contact }}</li>
+    <img src = "{{ i.image }}">
+    {% endfor %}
+    <a href="{% url 'home' %}">click here for next page</a>
+</center>

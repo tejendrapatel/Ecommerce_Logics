@@ -1,0 +1,11 @@
+<center>
+    Add New Student<br>
+    <form action="" method="post">
+        {% csrf_token %}
+        Value 1:<input type="text"  autofocus name="v1" placeholder="Value 1" /><br><br>
+        Value 2:<input type="text"   name="v2" placeholder="Value 2" /><br><br>
+        <input type="submit" value="ADD" ><br><br><br>
+    </form>
+       Output: <input type="text" placeholder="Output" value="{{out}}" disabled/><br><br>
+
+</center>

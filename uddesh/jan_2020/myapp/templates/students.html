@@ -1,0 +1,18 @@
+<h1> This page contains Students Information</h1>
+<style>
+    table,th,td{border: 1px solid black}
+</style>
+<center>
+    <table style="width:100">
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+        </tr>
+        {% for i in key1 %}
+           <tr>
+               <td><a href="{% url 'details' i.id %}">{{ i.name }}</a></td>
+               <td>{{ i.rollno }}</td>
+           </tr>
+        {% endfor %}
+    </table>
+</center>

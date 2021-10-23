@@ -1,0 +1,34 @@
+{% load static %}
+<h1>This is  students   Details</h1>
+    <style>
+        table,th,td{border: 1px solid black}
+    </style>
+<center>
+    <table style="width:100% height:100%">
+     <tr>
+          <th>Name</th>
+          <th>Roll No.</th>
+          <th>Email</th>
+          <th>Number</th>
+          <th>Image</th>
+          <th>College</th>
+      </tr>
+     <tr>
+         <td> {{ key1.name }} </td>
+         <td> {{ key1.rollno }} </td>
+         <td> {{ key1.email }} </td>
+         <td> {{ key1.number }} </td>
+         <td> <a href="{{ key1.image }}">image</a></td>
+         <td> {{ key1.clg.name }} </td>
+     </tr>
+    </table>
+    <a href="{% url 's_delete' key1.id %}"><button>Delete</button></a><br>
+    <a href="{% url 's_edit' key1.id %}"><button>Edit Details</button></a>
+</center>
+     <center>
+        <td style="color:red">
+            <marquee><h1 style="color:green">student</h1></marquee>
+            <img src="{% static 'backgrounddead.jpg' %}" width="100%" height="100%">
+        </td>
+     </center>
+</center>
